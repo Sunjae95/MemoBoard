@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/stylesheets/auth.css">
+</head>
+
+<body>
+    <header>
+        <a href="/"><b>MemoBoard</b></a>
+    </header>
+    <main>
+        <div>
+            <h1>회원가입</h1>
+            <form method="POST" action="/auth/register">
+                아이디
+                <input type="text" id="id" name="id" placeholder="아이디를 입력하세요" autocomplete="off"><br>
+                비밀번호
+                <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요"><br>
+                비밀번호 확인
+                <input type="password" id="passwordCheck" name="passwordCheck" placeholder="확인할 비밀번호를 입력하세요"
+                    onkeyup="check()"><br>
+                <a id="result">비밀번호를 확인해주세요</a>
+                <br>
+                <input type="submit" id="save" value="저장" onclick="registerCheck()"><br>
+                <input type="button" value="취소" onclick="location.href='/'">
+            </form>
+        </div>
+    </main>
+    
+    <script src="/javascripts/auth.js"></script>
+</body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MemoBoard</title>
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/table.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/board"><b>MemoBoard</b></a></li>
+                <li><a href="/post"><b>글쓰기</b></a></li>
+                <li><a href="/mypage"><b>마이페이지</b></a></li>
+                <li><a href="/auth/logout"><b>로그아웃</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>게시글</h1>
+            <table>
+                <tr>
+                    <th>번호</th>
+                    <th>작성자</th>
+                    <th>제목</th>
+                    <th>날짜</th>
+                </tr>
+                <%
+                    for(let i=0; i<row.length; i++)
+                    {
+                        let data = row[i];
+                %>
+                <tr class="homeTr">
+                    <td><%=data.num%></td>
+                    <td><%=data.id%></td>
+                    <td><a href="/post/read/<%=row[i].num%>"><%=row[i].title%></a></td>
+                    <td><%=data.date%></td>
+                </tr>
+                <%}%>
+            </table>
+        </div>
+   </main>
+</body>
+</html>

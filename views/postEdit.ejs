@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>글수정 - <%= title%></title>
+        <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/form.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/board"><b>MemoBoard</b></a></li>
+                    <li><a href="/post"><b>글쓰기</b></a></li>
+                    <li><a href="/mypage"><b>마이페이지</b></a></li>
+                    <li><a href="/auth/logout"><b>로그아웃</b></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <form method="POST" name="editForm">
+                    <a>제목</a><br>
+                    <input type="text" name="title" value="<%=title%>"><br>
+                    <a>내용</a><br>
+                    <textarea  rows="10" cols="30" name="contents"><%=row.contents%></textarea><br>
+                    <input type="button" onclick="editFunction(1,`<%=row.num%>`)"  value="수정"><br>    
+                    <input type="button" onclick="editFunction(2,`<%=row.num%>`)"  value="삭제">
+                </form>
+            </div>  
+        </main>
+        <script src="\javascripts\postInfo.js"></script>
+    </body>
+</html>

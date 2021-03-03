@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/form.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/board"><b>MemoBoard</b></a></li>
+                <li><a href="/post"><b>글쓰기</b></a></li>
+                <li><a href="/mypage"><b>마이페이지</b></a></li>
+                <li><a href="/auth/logout"><b>로그아웃</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <form method="POST" action="/post">
+                <h3>제목</h3>
+                <input type="text" name="title" autocomplete="off">
+                <h3>내용</h3>
+                <textarea name="contents" rows="10" cols="30"></textarea><br>
+                <input type="submit" value="저장"><br>
+                <input type="button" value="취소" onclick="history.go(-1)"><br>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

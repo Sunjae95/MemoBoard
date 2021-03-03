@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>게시글 - <%= title%></title>
+  <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+  <link rel="stylesheet" href="/stylesheets/readTable.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/board"><b>MemoBoard</b></a></li>
+        <li><a href="/post"><b>글쓰기</b></a></li>
+        <li><a href="/mypage"><b>마이페이지</b></a></li>
+        <li><a href="/auth/logout"><b>로그아웃</b></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div>
+      <table>
+        <% let postRead = row %>
+        <tr>
+          <th>번호</th>
+          <td><%=postRead.num%></td>
+          <th>글쓴이</th>
+          <td><%=postRead.id%></td>
+        </tr>
+        <tr>
+          <th>제목</th>
+          <td colspan="5"><%=postRead.title%></td>
+        </tr>
+        <tr>
+          <th>작성일</th>
+          <td colspan="2"><%=postRead.date%></td>
+        </tr>
+        <tr>
+          <td colspan="6" height="400"><%=postRead.contents%></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</body>
+
+</html>

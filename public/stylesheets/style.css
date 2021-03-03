@@ -1,0 +1,46 @@
+body {
+  background: #f9f3f3;
+  color: #f25287;
+  margin: 0px;
+}
+
+header {
+  background: #f25287;
+  padding-top: 50px;
+  text-align: center;
+  height: 100px;
+  border-bottom: 2px solid gray;
+}
+
+header>a {
+  color: #f7d9d9;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+main {
+  margin: 100px 30%;
+}
+
+main div {
+  margin: 5% 20%;
+  font-size: 20px;
+}
+
+main>div button {
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  border: 2px solid gray;
+  background: #f7d9d9;
+  display: block;
+}
+
+main>div button:hover {
+  background: #dddddd;
+  transition: 0.5s;
+}
+
+main>div button:focus {
+  outline: none;
+}
